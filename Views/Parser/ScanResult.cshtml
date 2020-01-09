@@ -1,0 +1,18 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "ScanResult";
+    Layout = null;
+}
+<a class="btn btn-primary" asp-action="Index" asp-controller="Parser">
+    Home
+</a>
+<br />
+<h1>ScanResult</h1>
+<br />
+
+
+@foreach (string link in Model)
+{
+    <p>@link</p>
+}
+<br />

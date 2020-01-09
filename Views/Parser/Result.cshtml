@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Parser.Models.Record>
+
+@{
+    ViewData["Title"] = "Result";
+    Layout = null;
+}
+
+<h1>Result</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Url</p>
+            </th>
+            <th>
+                <p>Body</p>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-sm btn-secondary navbar-btn"
+       asp-controller="Parser" asp-action="Index">
+        </a>
+</div>
